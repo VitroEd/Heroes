@@ -1,0 +1,23 @@
+<!DOCTYPE html>
+<html lang="pt-br">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Herois | Main </title>
+</head>
+<body>
+    {% if universo == "DC" and heroi == "Ww" %}
+        O universo escolhido é a {{ universo }}.<br>
+        E o héroi escolhido é a {{ heroi }}.<br>
+        <img src="{{ url_for('static', filename='Ww.png') }}" width="200"><br>
+
+    {% elif universo == "marvel" and heroi == "capitao" %}
+        O universo escolhido é a {{ universo }}.<br>
+        E o héroi escolhido é o {{ heroi }}.<br>
+        <img src="{{ url_for('static', filename='capitao.png') }}" width="200"><br>
+
+    {% else %}
+        escolhe certo, bobão.
+    {% endif %}
+</body>
+</html>
